@@ -17,13 +17,14 @@ nav {
     min-height: 10vh;
     margin: auto;
     background-color: aqua;
-
+    display: flex;
 }
 
 #logo {
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 3rem;
+    width: 90%;
 }
 
 .nav-links{
@@ -34,6 +35,15 @@ nav {
 .nav-links li {
     padding-left: 10rem;
     font-size: 1.2rem;
+
+}
+.burger-menu{
+    display: block;
+    margin:auto;
+}
+
+.burger-menu img{
+    height: 10vh;
 
 }
 
