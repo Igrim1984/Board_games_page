@@ -18,6 +18,7 @@ nav {
     margin: auto;
     background-color: aqua;
     display: flex;
+    justify-content: flex-end;
 }
 
 #logo {
@@ -25,6 +26,7 @@ nav {
     font-family: 'Dancing Script', cursive;
     font-size: 3rem;
     width: 90%;
+    justify-self: center;
 }
 
 .nav-links{
@@ -57,17 +59,20 @@ nav {
 
 .article-box {
     padding-top: 10vh;
-    margin:auto;
+    display: flex;
+    justify-content: center;
+
 }
 
 article {
-    margin: auto;
-    width: 80%;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: rgba(0, 128, 128, 0.285);
     padding: 10px;
-    margin-bottom: 5vh;
+    margin: 10px;;
     border-radius: 20px;
+    height: 400px;
+    width: 400px;
     
 }
 
