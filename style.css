@@ -1,22 +1,32 @@
+:root{
+    --primary: rgb(30, 100, 240);
+    --secondary: lightblue;
+    --nextcolor: rgb(240, 20, 20);
+}
+
+
+/* <!----------- Reset Style ----------------> */
+
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
 
-body {
-    color: white;
-    background: url(./images/Cyber.jpg);
-    background-size: cover;
-    padding: 0rem 5rem;
 
+/* <!----------- General Styles ----------------> */
+body {
+    width: 100vw;
+    color: white;
+    background: linear-gradient(var(--secondary),var(--primary));
+    background-size: cover;
 }
 
-
+/* <!----------- Navi Styles ----------------> */
 nav {
     min-height: 10vh;
     margin: auto;
-    background-color: aqua;
+    background: linear-gradient(90deg,var(--primary), var(--nextcolor)) ;
     display: flex;
     justify-content: flex-end;
 }
@@ -25,7 +35,7 @@ nav {
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 3rem;
-    width: 90%;
+    width: 100vw;
     justify-self: center;
 }
 
@@ -57,22 +67,22 @@ nav {
     font-family: 'Dancing Script', cursive;
 }
 
+/* <!----------- Articles Styles ----------------> */
 .article-box {
     padding-top: 10vh;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
 }
 
 article {
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: rgba(0, 128, 128, 0.285);
-    padding: 10px;
+
+    background-color: var(--primary);
+    padding: 5vh 5vw;
     margin: 10px;;
     border-radius: 20px;
-    height: 400px;
-    width: 400px;
+    width: 60vw;
     
 }
 
@@ -80,8 +90,8 @@ article img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-    padding: 10px;
+    width: 50vw;
+    padding: 15px;
     background-color: white;
     border: 2px solid black;
     border-radius: 10px;
@@ -97,9 +107,8 @@ article:hover{
     background-color: blue;
 } 
 article:hover > img{
-    width: 100%;
-    padding:0;
-    transition-duration: 1.5s;
+    padding: 5px;;
+    transition-duration: 1s;
     background-color: yellow;
     opacity: 1;
  }
@@ -108,11 +117,10 @@ article:hover > img{
     background-color: rgba(255, 255, 255, 0.747);
     color: black;
     border-radius: 10px;
-    transition-duration: 1.5s;
+    transition-duration: 1s;
  }
 
-
-
+/* <!----------- Intro Styles ----------------> */
 
 .intro{
     background: url(./images/Susza.jpg);
