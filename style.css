@@ -1,7 +1,10 @@
 :root{
     --primary: rgb(30, 100, 240);
-    --secondary: lightblue;
+    --primary-opt:rgb(30, 100, 240, 0.5);
+    --secondary: rgb(0, 0, 200);
+    --secondary-opt: rgb(0, 0, 200, 0.7);
     --nextcolor: rgb(240, 20, 20);
+    --nextcolor-opt: rgb(240, 20, 20, 0.7);
 }
 
 
@@ -18,17 +21,19 @@ box-sizing: border-box;
 body {
     width: 100vw;
     color: white;
-    background: linear-gradient(var(--secondary),var(--primary));
-    background-size: cover;
+    background: linear-gradient(to right bottom,var(--secondary),var(--primary));
 }
 
 /* <!----------- Navi Styles ----------------> */
 nav {
     min-height: 10vh;
     margin: auto;
-    background: linear-gradient(90deg,var(--primary), var(--nextcolor)) ;
+    background: linear-gradient(90deg,var(--primary-opt), var(--nextcolor-opt)) ;
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 #logo {
@@ -37,6 +42,7 @@ nav {
     font-size: 3rem;
     width: 100vw;
     justify-self: center;
+    padding: 10px;
 }
 
 .nav-links{
@@ -51,7 +57,7 @@ nav {
 }
 .burger-menu{
     display: block;
-    margin:auto;
+    margin-right: 20px;
 }
 
 .burger-menu img{
@@ -66,23 +72,83 @@ nav {
     font-size: 2rem;
     font-family: 'Dancing Script', cursive;
 }
+/* <!----------- Backgroung Images ----------------> */
+.dice_img{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rollingDice 10s infinite ease-in;
+}
+
+@keyframes rollingDice {
+    from {top: -15vh}
+    to {top: 200vh};
+    from {left:0}
+    to {left: 100%};
+    from {transform:rotate(0deg)}
+    to {transform:rotate(360deg)}
+}
+
+.chess_pawn {
+    width: 60px;
+    height: 160px;
+    top: 0;
+    right: 10%;
+    position: absolute;
+    animation: chess_pawn 20s infinite ease-out;
+}
+
+@keyframes chess_pawn {
+    from {top: -15vh} to {top: 200vh};
+    from {right: 20%} to {right: 100%};
+    from {transform:rotate(0deg)}
+    to {transform:rotate(360deg)};
+}
+
+.card {
+    width:120px;
+    height: 180px;
+    top: -15vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    animation: card_rotate 10s linear infinite,
+            card_falling 20s linear infinite;
+}
+
+@keyframes card_rotate {
+    from {transform:rotate(0deg)}
+    to {transform:rotate(360deg)};
+
+}
+
+@keyframes card_falling {
+    from {top: -15vh} to {top: 300vh};
+    from {left: 50vw} to {left: 70vh}
+}
 
 /* <!----------- Articles Styles ----------------> */
+
+
 .article-box {
     padding-top: 10vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 article {
 
-    background-color: var(--primary);
+    background-color: var(--primary-opt);
     padding: 5vh 5vw;
-    margin: 10px;;
+    margin: 10px;
     border-radius: 20px;
-    width: 60vw;
+    width: 80vw;
+    position: relative;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     
 }
 
@@ -90,7 +156,8 @@ article img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50vw;
+    margin-bottom: 15px;
+    width: 70vw;
     padding: 15px;
     background-color: white;
     border: 2px solid black;
@@ -101,11 +168,9 @@ article img{
  article p{
     text-align: justify;
     padding: 10px;
+    font-size: 1,5rem;
  }
 
-article:hover{
-    background-color: blue;
-} 
 article:hover > img{
     padding: 5px;;
     transition-duration: 1s;
