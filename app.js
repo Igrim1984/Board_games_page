@@ -17,8 +17,8 @@ const POPUP_CLOSE = document.querySelector(".popup__close");
 const POPUP_IMG = document.querySelector(".popup__img");
 const ARROW_LEFT = document.querySelector(".popup__arrow--left");
 const ARROW_RIGHT = document.querySelector(".popup__arrow--right");
-const GALLERY_COLLAPSE = document.querySelector(".gallery--collapse");
-const GALLERY_EXPAND = document.querySelector(".gallery--expand");
+const GALLERY_COLLAPSE = document.querySelector(".gallery__collapse--btn");
+const GALLERY_EXPAND = document.querySelector(".gallery__expand--btn");
 const GALLERY = document.querySelector(".gallery");
 
 
