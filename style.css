@@ -85,9 +85,10 @@ nav {
 
 /* <!----------- Slider Styles ----------------> */
 
-.gallery-name {
+.gallery--name {
   text-align: center;
-  padding: 10vh 10vw;
+  font-size: 3rem;
+  margin-top: 50px;
 }
 
 .gallery {
@@ -105,7 +106,47 @@ nav {
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 20px;
+  transition:ease-in-out 0.6s;
+  margin-top:50px;
 }
+
+.gallery--collapse, .gallery--expand {
+position: absolute;
+top: -3%;
+left: 50;
+padding: 10px 30px;
+background-color: rgb(255, 255, 255, 0.9);
+border: none;
+border-radius: 60px;
+letter-spacing: 2px;
+font-weight:800;
+color: var(--secondary);
+cursor: pointer;
+font-size: 30px;
+box-shadow: 3px 3px 3px 1px rgb(0, 0, 0, 0.5);
+border: 3px solid var(--secondary);
+margin-bottom: 20px;
+}
+
+.gallery--expand{
+  background-color:rgb(255, 255, 255, 0.9);
+}
+
+.gallery--collapse:hover, .gallery--expand:hover {
+  transform: scale(1.1);
+  letter-spacing: 8px;
+  transition-duration: 0.5s;
+  box-shadow: 6px 6px 6px 2px rgb(0, 0, 0, 0.5);
+}
+
+.gallery--hidden {
+  display: none;
+}
+
+.gallery--collapsed {
+  padding: 0px;
+  }
+
 
 .thumbnail {
   width: 250px;
@@ -315,6 +356,7 @@ nav {
 /* <!----------- Articles Styles ----------------> */
 
 .article-box {
+  margin-top: 50px;
   padding-top: 10vh;
   display: flex;
   justify-content: center;
