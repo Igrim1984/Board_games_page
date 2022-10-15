@@ -112,9 +112,9 @@ nav {
 
 .gallery__collapse--btn, .gallery__expand--btn {
 position: absolute;
-top: -3%;
+top: -20px;
 left: 50;
-padding: 10px 30px;
+padding: 5px;
 background-color: rgb(255, 255, 255, 0.9);
 border: none;
 border-radius: 60px;
@@ -122,7 +122,7 @@ letter-spacing: 2px;
 font-weight:800;
 color: var(--secondary);
 cursor: pointer;
-font-size: 30px;
+font-size: 16px;
 box-shadow: 3px 3px 3px 1px rgb(0, 0, 0, 0.5);
 border: 3px solid var(--secondary);
 margin-bottom: 20px;
@@ -130,11 +130,13 @@ margin-bottom: 20px;
 
 .gallery--expand{
   background-color:rgb(255, 255, 255, 0.9);
+  position: static;
+
 }
 
-.gallery--collapse:hover, .gallery--expand:hover {
+.gallery__collapse--btn:hover, .gallery--expand-.gallery__expand--btn {
   transform: scale(1.1);
-  letter-spacing: 8px;
+  letter-spacing: 2px;
   transition-duration: 0.5s;
   box-shadow: 6px 6px 6px 2px rgb(0, 0, 0, 0.5);
 }
@@ -272,13 +274,13 @@ margin-bottom: 20px;
     top: -15vh;
   }
   to {
-    top: 200vh;
+    top: 95%;
   }
   from {
     left: 0;
   }
   to {
-    left: 100vw;
+    left: 115vw;
   }
   from {
     transform: rotate(0deg);
@@ -302,13 +304,13 @@ margin-bottom: 20px;
     top: -15vh;
   }
   to {
-    top: 100vh;
+    top: 95%;
   }
   from {
     right: 20vw;
   }
   to {
-    right: 50vw;
+    right: 150vw;
   }
   from {
     transform: rotate(0deg);
@@ -343,13 +345,13 @@ margin-bottom: 20px;
     top: -15vh;
   }
   to {
-    top: 100vh;
+    top: 95%;
   }
   from {
-    left: 50vw;
+    left: 80vw;
   }
   to {
-    left: 10vh;
+    left: -15vw;
   }
 }
 
@@ -370,11 +372,13 @@ article {
     rgb(255, 255, 255, 0.7)
   );
   padding: 5vh 5vw;
-  margin: 10px;
+  margin: 20px;
   border-radius: 20px;
-  width: 80vw;
+  box-shadow: 2px 2px 2px 1px rgb(0, 0, 0, 0.5);
+  width: 600px;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+  transition-duration: 1s;
 }
 
 article img {
@@ -382,7 +386,8 @@ article img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
-  width: 70vw;
+  width: 100%;
+  max-height: 75%;
   padding: 15px;
   background-color: white;
   border: 2px solid black;
@@ -394,6 +399,10 @@ article p {
   text-align: justify;
   padding: 10px;
   font-size: 1, 5rem;
+}
+article:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 6px 6px 3px rgb(0, 0, 0, 0.5);
 }
 
 article:hover > img {
@@ -422,7 +431,7 @@ article:hover > p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: none; */
+  display: none;
 }
 
 .slider {
