@@ -8,6 +8,22 @@ tl.to(".intro", { y: "-100%", duration: 1.5 }, "-=1");
 tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
 tl.fromTo("big-text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 
+// <----------------------- Navigation -------------------------->
+
+
+const NAV_LINKS = document.querySelector(".nav-links");
+const NAV_BTN = document.querySelector(".burger-menu");
+
+const changeNav = () => {
+  if (NAV_LINKS.classList.contains("nav-links--close")) {
+    NAV_LINKS.classList.remove("nav-links--close");
+      } else {
+    NAV_LINKS.classList.add("nav-links--close")
+  }
+};
+
+NAV_BTN.addEventListener("click", changeNav);
+
 // <----------------------- Slider -------------------------->
 
 const THUMBNAILS  = document.querySelectorAll(".thumbnail, .gallery--name")
@@ -20,6 +36,7 @@ const ARROW_RIGHT = document.querySelector(".popup__arrow--right");
 const GALLERY_COLLAPSE = document.querySelector(".gallery__collapse--btn");
 const GALLERY_EXPAND = document.querySelector(".gallery__expand--btn");
 const GALLERY = document.querySelector(".gallery");
+
 
 
 let currentImgIndex;
