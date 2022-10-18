@@ -1,9 +1,9 @@
 :root {
-  --primary: rgb(30, 100, 240);
-  --primary-opt: rgb(30, 100, 240, 0.5);
-  --secondary: rgb(0, 0, 200);
-  --secondary-opt: rgb(0, 0, 200, 0.7);
-  --nextcolor: rgb(240, 20, 20);
+  --primary: rgb(200, 255, 255);
+  --primary-opt: rgb(200, 255, 255, 0.7);
+  --secondary: rgb(140, 210, 240);
+  --secondary-opt: rgb(140, 210, 240, 0,7);
+  --nextcolor: rgb(30, 30, 30);
   --nextcolor-opt: rgb(240, 20, 20, 0.7);
 }
 
@@ -18,8 +18,9 @@
 /* <!----------- General Styles ----------------> */
 body {
   width: 100vw;
-  color: white;
+  color: var(--nextcolor);
   overflow-x: hidden;
+  font-family: 'Lobster Two', cursive;
   background: linear-gradient(
     to right bottom,
     var(--secondary),
@@ -35,12 +36,8 @@ main {
 nav {
   min-height: 10vh;
   margin: auto;
-  background: linear-gradient(
-    90deg,
-    var(--primary-opt),
-    var(--nextcolor-opt),
-    var(--primary-opt)
-  );
+  background: var(--primary)
+  ;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -51,7 +48,6 @@ nav {
 
 #logo {
   text-align: center;
-  font-family: "Dancing Script", cursive;
   font-size: 3rem;
   width: 100vw;
   justify-self: center;
@@ -74,7 +70,7 @@ nav {
 
 
 .nav-links li {
-  font-size: 2.5rem;
+  font-size: 32px;
   padding: 15px;
   letter-spacing: 4px;
   cursor: pointer;
@@ -82,7 +78,7 @@ nav {
 .burger-menu {
   display: block;
   min-width: 100%;
-  background-color: rgb(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +88,7 @@ nav {
 
 
 .burger-menu img {
-  height: 5vh;
+  height: 20px;
 }
 
 .nav-links li:hover {
@@ -100,7 +96,7 @@ nav {
 }
 
 .burger-menu:hover {
-  background-color: white;
+  background-color: var(--secondary);
 }
 
 
@@ -110,7 +106,6 @@ nav {
   text-align: center;
   margin: auto;
   font-size: 2rem;
-  font-family: "Dancing Script", cursive;
 }
 
 /* <!----------- Slider Styles ----------------> */
@@ -149,12 +144,13 @@ background-color: rgb(255, 255, 255, 0.9);
 border: none;
 border-radius: 60px;
 letter-spacing: 2px;
-font-weight:800;
-color: var(--secondary);
+font-weight: 700;
+font-style: italic;
+color: var(--nextcolor);
 cursor: pointer;
 font-size: 16px;
 box-shadow: 3px 3px 3px 1px rgb(0, 0, 0, 0.5);
-border: 3px solid var(--secondary);
+border: 3px solid var(--nextcolor);
 margin-bottom: 20px;
 }
 
@@ -438,7 +434,7 @@ article:hover {
 article:hover > img {
   padding: 5px;
   transition-duration: 1s;
-  background-color: yellow;
+  background-color: var(--nextcolor);
   opacity: 1;
 }
 
