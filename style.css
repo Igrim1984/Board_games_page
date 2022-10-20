@@ -20,7 +20,7 @@ body {
   width: 100vw;
   color: var(--nextcolor);
   overflow-x: hidden;
-  font-family: 'Lobster Two', cursive;
+  font-family: 'Lato', sans-serif;
   background: linear-gradient(
     to right bottom,
     var(--secondary),
@@ -41,7 +41,7 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  position: relative;
+  position:relative;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }
