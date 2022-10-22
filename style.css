@@ -36,8 +36,8 @@ main {
 nav {
   min-height: 10vh;
   margin: auto;
-  background: var(--primary)
-  ;
+  background: black;
+  color:white;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -84,6 +84,7 @@ nav {
   align-items: center;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+  transition-delay: 2s;
 }
 
 
