@@ -1,9 +1,9 @@
 :root {
-  --primary: rgb(200, 255, 255);
+  --primary: rgb(2, 14, 33);
   --primary-opt: rgb(200, 255, 255, 0.7);
-  --secondary: rgb(140, 210, 240);
+  --secondary: rgb(216, 236, 223);
   --secondary-opt: rgb(140, 210, 240, 0,7);
-  --nextcolor: rgb(30, 30, 30);
+  --nextcolor: rgb(250, 250, 250);
   --nextcolor-opt: rgb(240, 20, 20, 0.7);
 }
 
@@ -20,9 +20,9 @@ body {
   width: 100vw;
   color: var(--nextcolor);
   overflow-x: hidden;
-  font-family: 'Lato', sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background: linear-gradient(
-    to right bottom,
+    to left top,
     var(--secondary),
     var(--primary)
   );
@@ -36,7 +36,7 @@ main {
 nav {
   min-height: 10vh;
   margin: auto;
-  background: black;
+  background: var(--primary);
   color:white;
   display: flex;
   justify-content: center;
@@ -107,6 +107,11 @@ nav {
   text-align: center;
   margin: auto;
   font-size: 2rem;
+
+}
+
+main{
+  position: relative;
 }
 
 /* <!----------- Slider Styles ----------------> */
@@ -141,7 +146,7 @@ position: absolute;
 top: -20px;
 left: 50;
 padding: 5px;
-background-color: rgb(255, 255, 255, 0.9);
+background-color: var(--primary);
 border: none;
 border-radius: 60px;
 letter-spacing: 2px;
@@ -449,7 +454,7 @@ article:hover > p {
 /* <!----------- Intro Styles ----------------> */
 
 .intro {
-  background: url(./images/Susza.jpg);
+  background: url(./images/Monopoly.jpg);
   position: fixed;
   top: 0;
   left: 0;
@@ -458,17 +463,21 @@ article:hover > p {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+
 }
 
 .slider {
-  background: url(./images/Cyber.jpg);
+  background: url(./images/Descent.jpg);
+background-size: cover;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transform: translateY(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro-text {
